@@ -7,7 +7,7 @@ import javax.swing.Timer;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-public class Cat {
+public class Cat { //Encapsulation (การห่อหุ้ม) ซ่อนวิธีการ แต่รู้ว่าต้องทำอะไร
     public int x, y, catSize, health;
     private int jumpHigh = 100;
     private boolean crouching = false;
@@ -28,7 +28,7 @@ public class Cat {
         return isJumping;
     }
 
-    public Cat(int x, int y, int catSize, int health) {
+    public Cat(int x, int y, int catSize, int health) { //Constructor (คอนสตรัคเตอร์) เตรียมความพร้อม
         this.x = x;
         this.y = y;
         this.baseY = y;
@@ -66,7 +66,7 @@ public class Cat {
     }
 
     
-    public void jump(JPanel game) {
+    public void jump(JPanel game) { //กระโดด Encapsulation (การห่อหุ้ม) ซ่อนวิธีการ แต่รู้ว่าต้องทำอะไร
         if (crouching || isJumping) return;
         isJumping = true;
         jumpStartY = y;
@@ -93,7 +93,7 @@ public class Cat {
     }
 
     
-    public void crouchDown() {
+    public void crouchDown() { //ย่อ Encapsulation (การห่อหุ้ม) ซ่อนวิธีการ แต่รู้ว่าต้องทำอะไร
         if (!crouching) {
             crouching = true;
             y = baseY + originalHeight / 2; 
@@ -102,7 +102,7 @@ public class Cat {
     }
 
     
-    public void standUp() {
+    public void standUp() { //ยืน Encapsulation (การห่อหุ้ม) ซ่อนวิธีการ แต่รู้ว่าต้องทำอะไร
         if (crouching) {
             crouching = false;
             y = baseY; 
@@ -115,7 +115,7 @@ public class Cat {
     }
 
     
-    public BufferedImage getImage() {
+    public BufferedImage getImage() { //อนิเมชั่น Encapsulation (การห่อหุ้ม) ซ่อนวิธีการ แต่รู้ว่าต้องทำอะไร
         BufferedImage imageToReturn;
 
         if (isJumping()) { 

@@ -28,7 +28,7 @@ public class StartMenu extends JPanel {
 
     }
 
-    @Override
+    @Override // ภาพหน้าแรก Polymorphism (การพ้องรูป - Method Overriding) การกระทำต่าง
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (backgroundImage != null) {

@@ -1,7 +1,7 @@
 package event;
 import character.*;
 import java.awt.Rectangle;
-public class Event {
+public class Event { // การชน Polymorphism (การพ้องรูป - Method Overloading) ต่างที่ค่า
     public static boolean checkHit(Cat cat, Wave wave) {
     Rectangle catRect = new Rectangle(cat.x, cat.y, cat.catSize, cat.catSize);
     Rectangle waveRect = new Rectangle(wave.x, wave.y, wave.width, wave.height);

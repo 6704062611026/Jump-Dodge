@@ -20,7 +20,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 
-public class Game extends JPanel implements KeyListener{
+public class Game extends JPanel implements KeyListener{ // โครงสร้างหลัก Compositon(องค์ประกอบ) เป็นผู้จัดการ
     private List<Rectangle> occupiedRects = new ArrayList<>();
     private Timer gameTimer; 
     private double timeLeft = 60.0;
@@ -73,8 +73,8 @@ public class Game extends JPanel implements KeyListener{
         }
     }
 
-    @Override
-    public void paintComponent(Graphics g) {
+    @Override // วาดตัวละคร Polymorphism (การพ้องรูป - Method Overriding) การกระทำต่าง
+    public void paintComponent(Graphics g) { 
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         isColliding = false;

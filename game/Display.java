@@ -1,10 +1,8 @@
-
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-public class Display extends JFrame implements ActionListener{
+public class Display extends JFrame implements ActionListener{  //การสร้างหน้าต่าง Inheritance(การสืบทอด) ยืม 
     public Display(){
         super("Jump Dodge");
         this.setSize(1200,400);
@@ -22,7 +20,7 @@ public class Display extends JFrame implements ActionListener{
     }
     
 
-     public void showStartMenu(){
+     public void showStartMenu(){  // add()หน้าPolymorphism (การพ้องรูป - Subtyping)
         removeContent();
         this.getContentPane().add(new StartMenu(this));
         this.revalidate();
@@ -64,12 +62,10 @@ public void gameOver(int timeLeft, int level, long score) {
 
     public static void main(String[] args){
         new Display();
-        
-        
     }
   
     
-    @Override
+    @Override // คุมเมนู Event Handling (การจัดการเหตุการณ์) ดักจับ
 public void actionPerformed(ActionEvent e) {
     String cmd = e.getActionCommand();
     if (cmd.equals("GoToLevelSelect")) {
