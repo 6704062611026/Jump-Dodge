@@ -321,7 +321,7 @@ public class Game extends JPanel implements KeyListener{
         }
     }
     private void startGameTimer() {
-        gameTimer = new Timer(150, e -> { 
+        gameTimer = new Timer(130, e -> { 
             timeLeft -= 0.1;
             if (!isColliding) {
                 score += 1; 
