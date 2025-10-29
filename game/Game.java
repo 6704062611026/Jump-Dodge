@@ -185,7 +185,7 @@ public class Game extends JPanel implements KeyListener{
         long cooldownRemaining = invincibleCooldown - timeSinceLastUse;
         if (cooldownRemaining <= 0 && !isInvincible) {
             g2.setColor(Color.white);
-            g2.drawString("Invisible(space bar)", cat.x-25, cat.y - 1);
+            g2.drawString("Invisible(Spacebar)", cat.x-25, cat.y - 1);
         } else {
             if (!isInvincible && cooldownRemaining > 0) {
                 float percent = cooldownRemaining / (float) invincibleCooldown;
